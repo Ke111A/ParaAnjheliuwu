@@ -1,0 +1,126 @@
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #f0f0f0;
+    color: #333;
+    text-align: center;
+}
+
+header {
+    background: #ff6f61;
+    color: #fff;
+    padding: 50px 20px;
+}
+
+h1 {
+    font-size: 2.5em;
+    margin: 0;
+}
+
+p {
+    font-size: 1.2em;
+}
+
+main {
+    padding: 20px;
+}
+
+.interactive {
+    margin-bottom: 40px;
+}
+
+#heartContainer {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.heart {
+    width: 100px;
+    height: 100px;
+    background: url('https://cdn-icons-png.flaticon.com/512/833/833472.png') no-repeat center center;
+    background-size: contain;
+    margin: 10px;
+    cursor: pointer;
+    transition: transform 0.3s, background-color 0.3s;
+    position: relative;
+}
+
+.heart:hover {
+    transform: scale(1.2);
+    background-color: rgba(255, 105, 135, 0.2);
+}
+
+.heart::after {
+    content: attr(data-message);
+    position: absolute;
+    bottom: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.heart:hover::after {
+    opacity: 1;
+}
+
+.surprise {
+    margin-top: 40px;
+}
+
+#surpriseButton {
+    background-color: #ff6f61;
+    color: #fff;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2em;
+    transition: background-color 0.3s;
+}
+
+#surpriseButton:hover {
+    background-color: #e55b4d;
+}
+
+#messageBox {
+    margin-top: 20px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.hidden {
+    display: none;
+}
+
+.button {
+    display: inline-block;
+    margin-top: 20px;
+    background-color: #ff6f61;
+    color: #fff;
+    text-decoration: none;
+    padding: 15px 30px;
+    border-radius: 5px;
+    font-size: 1.2em;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.button:hover {
+    background-color: #e55b4d;
+    transform: scale(1.05);
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    margin-top: 40px;
+}
